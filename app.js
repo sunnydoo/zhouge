@@ -5,6 +5,18 @@ var app = angular.module('gemStore', [ ]);
 app.controller("StoreController", function() { 
     this.products = gems;
 });
+    
+app.controller("TabController", function(){
+    this.tab = 1;
+    
+    this.isSet = function( setValue ) {
+        return setValue === this.tab ? true : false;
+    };
+    
+    this.setTab = function( setValue ) {
+        return this.tab = setValue;  
+    };
+});
 
 var gems = [
     {
@@ -18,7 +30,6 @@ var gems = [
       images: [
         "images/gem-02.gif",
         "images/gem-05.gif",
-        "images/gem-09.gif"
       ],
       reviews: [{
         stars: 5,
@@ -43,7 +54,6 @@ var gems = [
       images: [
         "images/gem-01.gif",
         "images/gem-03.gif",
-        "images/gem-04.gif",
       ],
       reviews: [{
         stars: 3,
@@ -66,9 +76,8 @@ var gems = [
       color: '#000',
       faces: 6,
       images: [
+        "images/gem-03.gif",
         "images/gem-06.gif",
-        "images/gem-07.gif",
-        "images/gem-09.gif"
       ],
       reviews: [{
         stars: 1,
