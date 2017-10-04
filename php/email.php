@@ -1,7 +1,7 @@
 <?php
 session_cache_limiter( 'nocache' );
 $subject = $_REQUEST['subject']; // Subject of your email
-$to = "support@themerole.com";  //Recipient's E-mail
+$to = "6272569@qq.com";  //Recipient's E-mail
 
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= "From: " . $_REQUEST['name'].'<'.$_REQUEST['email'] .'>'. "\r\n"; 
