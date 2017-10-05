@@ -80,13 +80,10 @@ $(window).scroll(function(){
  (function () {
         $('.counter').counterUp({
             delay: 2,
-            time: 3000
+            time: 300
         });
 
     })();
-
-
-
 });
 
 
