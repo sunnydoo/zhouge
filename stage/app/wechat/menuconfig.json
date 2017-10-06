@@ -1,0 +1,37 @@
+{
+    "button": [
+        {
+            "type": "view", 
+            "name": "入库", 
+            "key": "InStorage",
+            "url": "http://frunto.com/index.php?/store/index"
+        }, 
+        {
+            "type": "view", 
+            "name": "出库", 
+            "key": "OutStorage",
+            "url": "http://frunto.com/index.php?/store/out_store/"
+
+        }, 
+        {
+            "name": "菜单", 
+            "sub_button": [
+                {
+                    "type": "view", 
+                    "name": "库存", 
+                    "url": "http://frunto.com/index.php?/store/stock/"
+                },
+               {
+                    "type": "view", 
+                    "name": "明细", 
+                    "url": "http://frunto.com/index.php?/store/history/"
+                }, 
+                {
+                    "type": "view", 
+                    "name": "设置", 
+                    "url": "http://frunto.com/index.php?/store/sys/"
+                }
+            ]
+        }
+    ]
+}

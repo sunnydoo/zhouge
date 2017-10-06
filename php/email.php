@@ -1,7 +1,9 @@
 <?php
+
+echo 'Email Sent Request';
 session_cache_limiter( 'nocache' );
 $subject = $_REQUEST['subject']; // Subject of your email
-$to = "6272569@qq.com";  //Recipient's E-mail
+$to = "support@frunto.com";  //Recipient's E-mail
 
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= "From: " . $_REQUEST['name'].'<'.$_REQUEST['email'] .'>'. "\r\n"; 
@@ -14,12 +16,12 @@ $message .= $_REQUEST['message'];
 if (@mail($to, $subject, $message, $headers))
 {
 	// Transfer the value 'sent' to ajax function for showing success message.
-	echo 'sent';
-	// header('Location: ../index.html');
+	echo 'Email to ' . $to .' was sent successfully.';
+	//header('Location: ../index.html');
 }
 else
 {
 	// Transfer the value 'failed' to ajax function for showing error message.
-	echo 'failed';
+	echo 'Email Sent failed from php/email.php';
 }
 ?>
