@@ -167,7 +167,7 @@ jQuery(document).ready(function() {
                     jQuery('.tp-banner').show().revolution(
                     {
                         dottedOverlay:"none",
-                        delay:16000,
+                        delay:8000,
                         startwidth:1170,
                         startheight:670,
                         hideThumbs:200,
