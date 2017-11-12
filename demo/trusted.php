@@ -8,7 +8,11 @@
 // All Rights researved by http://www.frunto.com
 //
 
+// You should first get Tableau Account for current user
+// Be aware that multiple ERP users with same permission can share same Tableau Account. 
+
 function get_user() {
+    // e.g. For all users in Opeation Department.
     return "cneast";
 }
 
@@ -56,7 +60,7 @@ function get_trusted_url( $server, $user, $view_url) {
 
 <div> 
 <iframe src="<?php echo get_trusted_url(get_server(), get_user(),'views/SuperStore/sheet0')?>"
-        width="100%" height="100%">
+        width="80%" height="80%">
 </iframe>
 </div>
 
