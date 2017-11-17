@@ -17,7 +17,11 @@ function get_user() {
 }
 
 function get_server() {
-    return "47.92.82.6";
+    return "123.206.18.252";
+}
+
+function get_view() {
+    return "views/Superstore_0/sheet3";
 }
 
 function get_trusted_ticket($server, $user) {
@@ -59,7 +63,7 @@ function get_trusted_url( $server, $user, $view_url) {
 <p>An embedded view appears below:</p>
 
 <div> 
-<iframe src="<?php echo get_trusted_url(get_server(), get_user(),'views/SuperStore/sheet0')?>"
+<iframe src="<?php echo get_trusted_url(get_server(), get_user(), get_view())?>"
         width="80%" height="80%">
 </iframe>
 </div>
