@@ -13,7 +13,7 @@
 
 function get_user() {
     // e.g. For all users in Opeation Department.
-    return "cneast";
+    return "sarah";
 }
 
 function get_server() {
@@ -60,14 +60,31 @@ function get_trusted_url( $server, $user, $view_url) {
 
 ?>
 
-<p>An embedded view appears below:</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Embed</title>
+    
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script type="text/javascript">
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "<?php echo get_trusted_url(get_server(), get_user(), get_view())?>";
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+            
+            // Create a viz object and embed it in the container div.
+            var viz = new tableau.Viz(containerDiv, url, options); 
+        }
+    </script>
+</head>
 
-<div> 
-<iframe src="<?php echo get_trusted_url(get_server(), get_user(), get_view())?>"
-        width="80%" height="80%">
-</iframe>
-</div>
+<body onload="initViz();">
+    <div id="vizContainer" style="width:1000px; height:800px;"></div>    
+</body>
 
-<p>
-This was created using trusted authentication.
-</p>
+</html>
