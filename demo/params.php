@@ -17,7 +17,7 @@ function get_user() {
     // According to current login ERP credential.
     //
     
-    return "sarah";
+    return "cneast";
 }
 
 function get_server() {
@@ -25,7 +25,7 @@ function get_server() {
 }
 
 function get_view() {
-    return "views/Superstore_0/sheet3";
+    return "views/UICustomization/1";
 }
 
 function get_trusted_ticket($server, $user) {
@@ -72,18 +72,25 @@ function get_trusted_url( $server, $user, $view_url) {
     <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
     <script type="text/javascript">
         function initViz() {
+            //Change this value to customize UI.
+            var perm = "SuperAdmin";
+            
+            var viz;
             var containerDiv = document.getElementById("vizContainer");
             var url = "<?php echo get_trusted_url(get_server(), get_user(), get_view())?>";
             var options = {
+                    "Category": "OfficeUse",
                     hideTabs: true,
                     hideToolbar: true,
                     onFirstInteractive: function () {
+                        var wb = viz.getWorkbook();
+                        wb.changeParameterValueAsync("Permission", perm);
                         console.log("Run this code when the viz has finished loading.");
                     }
             };
             
             // Create a viz object and embed it in the container div.
-            var viz = new tableau.Viz(containerDiv, url, options); 
+            viz = new tableau.Viz(containerDiv, url, options); 
            
         }
     </script>
