@@ -17,7 +17,7 @@ function get_user() {
     // According to current login ERP credential.
     //
     
-    return "sarah";
+    return "cneast";
 }
 
 function get_server() {

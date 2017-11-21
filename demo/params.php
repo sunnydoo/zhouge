@@ -67,19 +67,18 @@ function get_trusted_url( $server, $user, $view_url) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Trusted Authentication Demo</title>
+    <title>UI Customization by Parameters Demo</title>
     
     <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
     <script type="text/javascript">
         function initViz() {
             //Change this value to customize UI.
-            var perm = "SuperAdmin";
+            var perm = "southwest";
             
             var viz;
             var containerDiv = document.getElementById("vizContainer");
             var url = "<?php echo get_trusted_url(get_server(), get_user(), get_view())?>";
             var options = {
-                    "Category": "OfficeUse",
                     hideTabs: true,
                     hideToolbar: true,
                     onFirstInteractive: function () {
