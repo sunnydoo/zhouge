@@ -17,7 +17,7 @@ function get_user() {
     // According to current login ERP credential.
     //
     
-    return "cneast";
+    return "sarah";
 }
 
 function get_server() {
@@ -73,7 +73,7 @@ function get_trusted_url( $server, $user, $view_url) {
     <script type="text/javascript">
         function initViz() {
             //Change this value to customize UI.
-            var perm = "southwest";
+            var UI_CUSTOMIZATION = "cneast";
             
             var viz;
             var containerDiv = document.getElementById("vizContainer");
@@ -83,7 +83,7 @@ function get_trusted_url( $server, $user, $view_url) {
                     hideToolbar: true,
                     onFirstInteractive: function () {
                         var wb = viz.getWorkbook();
-                        wb.changeParameterValueAsync("Permission", perm);
+                        wb.changeParameterValueAsync("Permission", UI_CUSTOMIZATION);
                         console.log("Run this code when the viz has finished loading.");
                     }
             };
@@ -96,6 +96,11 @@ function get_trusted_url( $server, $user, $view_url) {
 </head>
 
 <body onload="initViz();">
+    <H1>New Hope Liuhe BI Platform</H1>
+    <p>&nbsp;</p>
+    <div>PlaceHolder: Financial Reports</div>
+    <p>&nbsp;</p>
+
     <div id="vizContainer" style="width:1000px; height:800px;"></div>    
 </body>
 

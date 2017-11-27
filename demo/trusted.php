@@ -75,8 +75,8 @@ function get_trusted_url( $server, $user, $view_url) {
             var containerDiv = document.getElementById("vizContainer");
             var url = "<?php echo get_trusted_url(get_server(), get_user(), get_view())?>";
             var options = {
-                    hideTabs: true,
-                    hideToolbar: true,
+                    hideTabs: false,
+                    hideToolbar: false,
                     onFirstInteractive: function () {
                         console.log("Run this code when the viz has finished loading.");
                     }
@@ -90,6 +90,11 @@ function get_trusted_url( $server, $user, $view_url) {
 </head>
 
 <body onload="initViz();">
+    <H1>New Hope Liuhe BI Platform</H1>
+    <p>&nbsp;</p>
+    <div>PlaceHolder: Financial Reports</div>
+    <p>&nbsp;</p>
+
     <div id="vizContainer" style="width:1000px; height:800px;"></div>    
 </body>
 
